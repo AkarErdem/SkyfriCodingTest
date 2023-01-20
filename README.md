@@ -1,4 +1,4 @@
-
+﻿
 # Skyfri Coding Test
 
 This project made for Skyfri Case to create an API to access a database with 2 tables, Tenants and Portfolio.
@@ -73,11 +73,11 @@ builder.Services.AddDbContext<SkyfriDbContext>(options=>options.UseSqlServer(Con
 ![Connect to server](Screenshots/smss_connect.png)
 
 * You can use your locally installed DB. Please note that Server name is important and will be used on the deployement.
-* Do configure to your choice in the `appsettings.js` file.
+* Do configure to your choice in the `appsettings.json` file.
 
 > Important Note: If you are using Visual Studio 2022,
-> you must update the latest version of EntityFramework (6.4.4) from Nuget Packages.
-> Also don't forget to check .NET Framework Version. (v4.8.1 the latest one)
+> you must update the latest version of EntityFrameworkCore from Nuget Packages.
+> Also don't forget to use the .NET Version 7.
 ## Deployment
 
 We have total of 3 steps to deploy this project.
@@ -98,7 +98,7 @@ On the Package Manager Console, run;
 This command will create a new database, as shown below 
 
 ![SkyfriDB](Screenshots/skyfri_db.png) 
-> 📝 Note that if you have changes on your scripts, you can use `Add-Migration CreateDatabase` command to add a new migration.
+> 📝 Note that if you have changes on your scripts, you can use `Add-Migration [YourMigrationFileName]` command to add a new migration.
 
 ### Step 3
 You can make API calls using Swagger. 
